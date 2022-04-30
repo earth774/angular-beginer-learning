@@ -13,4 +13,12 @@ export class AppComponent {
   testNumberChange(value: number) {
     console.log(`test number chnage : ${value}`);
   }
+
+  doAppMinChange(value: number) {
+    console.log(`test minChange : ${value}`);
+  }
+
+  doAppMaxChange(value: number) {
+    console.log(`test maxChange : ${value}`);
+  }
 }

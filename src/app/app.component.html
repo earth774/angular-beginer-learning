@@ -1,4 +1,4 @@
-<app-action-bar
+<!-- <app-action-bar
   [step]="5"
   (numberChange)="testNumberChange($event)"
 ></app-action-bar>
@@ -7,4 +7,11 @@
   [step]="10"
   (numberChange)="testNumberChange($event)"
 ></app-action-bar>
-<button type="button" (click)="testClick()">testEvent</button>
+<button type="button" (click)="testClick()">testEvent</button> -->
+
+<app-max-min-meter
+  [minLabel]="'myMinLabel'"
+  [maxLabel]="'myMaxLabel'"
+  (minChange)="doAppMinChange($event)"
+  (maxChange)="doAppMaxChange($event)"
+></app-max-min-meter>

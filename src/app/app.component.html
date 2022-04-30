@@ -1,17 +1,11 @@
-<!-- <app-action-bar
-  [step]="5"
-  (numberChange)="testNumberChange($event)"
-></app-action-bar>
-<br />
-<app-action-bar
-  [step]="10"
-  (numberChange)="testNumberChange($event)"
-></app-action-bar>
-<button type="button" (click)="testClick()">testEvent</button> -->
+<app-sqaure-flex
+  [divWidth]="sqaureWidth"
+  [divHeight]="sqaureHeight"
+></app-sqaure-flex>
 
-<app-max-min-meter
-  [minLabel]="'myMinLabel'"
-  [maxLabel]="'myMaxLabel'"
-  (minChange)="doAppMinChange($event)"
-  (maxChange)="doAppMaxChange($event)"
-></app-max-min-meter>
+<div>
+  width:
+  <button type="button" (click)="sqaureWidth = 50">50px</button>
+  <button type="button" (click)="sqaureWidth = 100">100px</button>
+  <button type="button" (click)="sqaureWidth = 200">200px</button>
+</div>

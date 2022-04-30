@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  sqaureWidth = 250;
+  sqaureHeight = 100;
   testClick() {
     console.log(`test binding`);
   }

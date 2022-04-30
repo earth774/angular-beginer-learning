@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./action-bar.component.scss'],
 })
 export class ActionBarComponent implements OnInit {
-  counter: number = 0;
+  @Input() counter: number = 0;
   @Input() step: number = 1;
-  @Output() numberChange = new EventEmitter();
+  @Output() counterChange = new EventEmitter();
 
   constructor() {}
 
@@ -17,11 +17,11 @@ export class ActionBarComponent implements OnInit {
   decrease() {
     if (this.counter - this.step < 0) return;
     this.counter -= this.step;
-    this.numberChange.emit(this.counter);
+    this.counterChange.emit(this.counter);
   }
   increase() {
     if (this.counter + this.step > 100) return;
     this.counter += this.step;
-    this.numberChange.emit(this.counter);
+    this.counterChange.emit(this.counter);
   }
 }

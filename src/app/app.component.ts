@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  sqaureWidth = 250;
+  sqaureWidth = 0;
   sqaureHeight = 100;
+  appCounter = 0;
+  activate: boolean = false;
   testClick() {
     console.log(`test binding`);
   }

@@ -1,11 +1,11 @@
-<app-sqaure-flex
-  [divWidth]="sqaureWidth"
-  [divHeight]="sqaureHeight"
-></app-sqaure-flex>
-
-<div>
-  width:
-  <button type="button" (click)="sqaureWidth = 50">50px</button>
-  <button type="button" (click)="sqaureWidth = 100">100px</button>
-  <button type="button" (click)="sqaureWidth = 200">200px</button>
+<div *ngIf="activate; else elseTemplate">
+  <app-action-bar [(counter)]="appCounter"></app-action-bar>
+  <app-sqaure-flex
+    [divWidth]="appCounter"
+    [divHeight]="sqaureHeight"
+  ></app-sqaure-flex>
 </div>
+
+<ng-template #elseTemplate>
+  <div>activate now</div>
+</ng-template>

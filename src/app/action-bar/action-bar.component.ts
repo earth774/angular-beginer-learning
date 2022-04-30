@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-action-bar',
@@ -7,16 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionBarComponent implements OnInit {
   counter: number = 0;
+  @Input() step: number = 1;
+  @Output() numberChange = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
 
   decrease() {
-    if (this.counter - 1 <= 0) return;
-    this.counter--;
+    if (this.counter - this.step < 0) return;
+    this.counter -= this.step;
+    this.numberChange.emit(this.counter);
   }
   increase() {
-    if (this.counter + 1 > 100) return;
-    this.counter++;
+    if (this.counter + this.step > 100) return;
+    this.counter += this.step;
+    this.numberChange.emit(this.counter);
   }
 }

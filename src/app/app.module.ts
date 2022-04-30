@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
 import { SqaureFlexComponent } from './sqaure-flex/sqaure-flex.component';
+import { TestRequestModule } from './test-request/test-request.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActionBarComponent,
     MaxMinMeterComponent,
-    SqaureFlexComponent
+    SqaureFlexComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, HttpClientModule, TestRequestModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
